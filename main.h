@@ -10,4 +10,4 @@ typedef struct function_brain
 int _printf(const char *format, ...);
 int _putchar(char c);
 
-#endif
+#endif /*MAIN_H*/
