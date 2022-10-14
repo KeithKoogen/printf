@@ -3,6 +3,12 @@
 #include <stdio.h>
 #include "_putchar.c"
 
+/**
+ * print_number - prints numbers
+ * @n: amount of numbers
+ * Return: nothing
+ */
+
 void print_numbers(int n)
 {
 	if (n < 10)
@@ -15,12 +21,26 @@ void print_numbers(int n)
     
 }
 
+/**
+ * print_char - prints a char
+ * @ptr: pointer
+ * @va_list: type for iterating arguments
+ * Return: nothing
+ */
+
 void print_char(va_list *ptr)
 {
   int i;
   i = va_arg(*ptr, int);
  _putchar(i);
 }
+
+/**
+ * print_integer - prints an integer
+ * @ptr: pointer
+ * @va_list: type for iterating arguments
+ * Return: nothing
+ */
 
 void print_integer(va_list *ptr)
 {
@@ -35,11 +55,16 @@ void print_integer(va_list *ptr)
 		
 		_putchar('-');
 		print_numbers(-i);
-			
-		
 	}
  
 }
+
+/**
+ * print_string - prints a string
+ * @ptr: pointer
+ * @va_list: type for iterating arguments
+ * Return: nothing
+ */
 
 void print_string(va_list *ptr)
 {
@@ -51,6 +76,12 @@ void print_string(va_list *ptr)
   while (str[i] != '\0')
   	_putchar(str[i]);
 }
+/**
+ * _printf - a function that prints
+ * @char: character
+ * @format: type of data to be printed on standard output
+ * Return: int
+ */
 
 int _printf(const char *format, ...)
 {
