@@ -95,14 +95,10 @@ int _printf(const char *format, ...)
 	unsigned int i, k, *count, finalcount;
 	va_list args, *ptr;
 
-	if (format == NULL)
-		return (-1);
 	count = malloc(sizeof(int));
-	if (count == NULL)
+	if (count == NULL || format == NULL)
 		return (-1);
 	ptr = &args;
-	if (ptr == NULL)
-		return (-1);
 	*count = 0;
 	va_start(args, format);
 	while (*format != '\0')
