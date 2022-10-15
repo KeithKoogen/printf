@@ -130,14 +130,8 @@ int _printf(const char *format, ...)
 				++k;
 			}
 
-			if (k == 1)
-			{
-				++format;
-			}
-			else
-			{
-				printc(*format, count);
-			}
+			k == 1 ? ++format : printc(*format, count);
+
 		}
 		++format;
 	}
