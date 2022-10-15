@@ -8,6 +8,6 @@ typedef struct function_brain
 }function;
 
 int _printf(const char *format, ...);
-int _putchar(char c);
+int printc(char c);
 
 #endif /*MAIN_H*/
