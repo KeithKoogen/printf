@@ -12,10 +12,10 @@ typedef struct function_brain
 
 int printc(char c);
 
-void print_numbers(int n);
-void print_char(va_list *ptr);
-void print_integer(va_list *ptr);
-void print_string(va_list *ptr);
+void print_numbers(int n, int *ptrint);
+void print_char(va_list *ptr, int *ptrint);
+void print_integer(va_list *ptr, int *ptrint);
+void print_string(va_list *ptr, int *ptrint);
 
 
 int _printf(const char *format, ...);
