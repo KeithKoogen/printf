@@ -101,17 +101,13 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 		return (-1);
-
 	count = malloc(sizeof(int));
-
 	if (count == NULL)
 		return (-1);
-
 	ptr = &args;
 	if (ptr == NULL)
 		return (-1);
 	*count = 0;
-
 	va_start(args, format);
 	while (*format != '\0')
 	{
@@ -149,11 +145,8 @@ int _printf(const char *format, ...)
 		}
 		++format;
 	}
-
 	va_end(args);
-
 	finalcount = *count;
 	free(count);
-
 return (finalcount);
 }
