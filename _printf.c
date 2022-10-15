@@ -8,15 +8,17 @@
  * Return: nothing
  */
 
-void print_numbers(int n)
+void print_numbers(int n, int *ptr)
 {
 	if (n < 10)
 	{
 		printc(n + 48);
+		*ptr++;
 		return;
 	}
 	print_numbers(n/10);
 	printc((n % 10) + 48);
+	*ptr++;
     
 }
 
@@ -27,11 +29,12 @@ void print_numbers(int n)
  * Return: nothing
  */
 
-void print_char(va_list *ptr)
+void print_char(va_list *ptr, int *ptr)
 {
   int i;
   i = va_arg(*ptr, int);
  printc(i);
+	*ptr++;
 }
 
 /**
@@ -41,19 +44,21 @@ void print_char(va_list *ptr)
  * Return: nothing
  */
 
-void print_integer(va_list *ptr)
+void print_integer(va_list *ptr, int *ptr)
 {
   int i;
   i = va_arg(*ptr, int);
 	if (i > -1)
 	{
 		print_numbers(i);
+		*ptr++;
 	}
 	else 
 	{
 		
 		printc('-');
 		print_numbers(-i);
+		*ptr++;
 	}
  
 }
@@ -65,7 +70,7 @@ void print_integer(va_list *ptr)
  * Return: nothing
  */
 
-void print_string(va_list *ptr)
+void print_string(va_list *ptr, int *ptr)
 {
   char *str;
   int i;
@@ -76,6 +81,7 @@ void print_string(va_list *ptr)
   while (str[i] != '\0')
   {
   	printc(str[i]);
+		*ptr++;
 	  ++i;
   }
 }
@@ -94,11 +100,10 @@ int _printf(const char *format, ...)
     {'i', print_integer},
 	{'d', print_integer}
   };
-	int i, j, k;
-
-
+	int i, k, *j, count;
   va_list args, *ptr;
 
+	j = malloc(sizeof(int));
 	ptr = &args;
 	j = 0;
 
@@ -108,7 +113,7 @@ int _printf(const char *format, ...)
 		if (*format != '%')
 		{
 			printc(*format);
-			++j;
+			
 		}
 		else
 		{
@@ -119,8 +124,8 @@ int _printf(const char *format, ...)
 			
 				if (functions[i].symbol == *(format + 1))
 				{
-					functions[i].function(ptr);
-					++j;
+					functions[i].function(ptr, j);
+					
 					
 					++k;
 	
@@ -136,13 +141,16 @@ int _printf(const char *format, ...)
 			else
 			{
 				printc(*format);
-			++j;
+			
 			}
 		}
 		++format;
 	}
 		
 	va_end(args);
+	
+	count = *j;
+	free(j);
   
-return (j);
+return (count);
 }
