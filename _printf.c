@@ -146,6 +146,12 @@ int _printf(const char *format, ...)
 					
 			++i;
 		}
+			if (*(format + 1) == '%')
+			{
+				printc(*format, count);
+				++k;
+			}
+					
 			if (k == 1)
 			{
 				++format;
