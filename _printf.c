@@ -130,5 +130,5 @@ int _printf(const char *format, ...)
 		
 	va_end(args);
   
-return (j);
+return (j + 1);
 }
