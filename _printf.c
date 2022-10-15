@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdarg.h>
 #include <stdio.h>
-#include "_putchar.c"
 
 /**
  * print_number - prints numbers
