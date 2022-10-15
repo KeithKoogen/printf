@@ -9,7 +9,7 @@
  * Return: nothing
  */
 
-void print_numbers(int n, *ptrint)
+void print_numbers(int n, int *ptrint)
 {
 	if (n < 10)
 	{
