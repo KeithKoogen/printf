@@ -106,7 +106,7 @@ int _printf(const char *format, ...)
 
 	j = malloc(sizeof(int));
 	ptr = &args;
-	j* = 0;
+	*j = 0;
 	
 
 	va_start(args, format);
