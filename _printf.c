@@ -91,18 +91,21 @@ int _printf(const char *format, ...)
     {'i', print_integer},
 	{'d', print_integer}
   };
-	int i;
+	int i, j;
+
+	j = 0;
   
   va_list args, *ptr;
-	
+
 	ptr = &args;
-  
+
 	va_start(args, format);
 	while (*format != '\0')
 	{
 		if (*format != '%')
 		{
 			printc(*format);
+			++j;
 		}
 		else
 		{
@@ -113,7 +116,9 @@ int _printf(const char *format, ...)
 				if (functions[i].symbol == *(format + 1))
 				{
 					functions[i].function(ptr);
+					++j;
 					++format;
+	
 				}
 					
 					
@@ -125,5 +130,5 @@ int _printf(const char *format, ...)
 		
 	va_end(args);
   
-return (0);
+return (j);
 }
