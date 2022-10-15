@@ -17,7 +17,7 @@ void print_numbers(int n, int *count)
 		
 		return;
 	}
-	print_numbers(n/10);
+	print_numbers(n/10, count);
 	printc((n % 10) + 48, count);
 
     
