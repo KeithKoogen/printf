@@ -9,16 +9,16 @@
  * Return: nothing
  */
 
-void print_numbers(int n)
+void print_numbers(int n, int *count)
 {
 	if (n < 10)
 	{
-		printc(n + 48);
+		printc(n + 48, count);
 		
 		return;
 	}
 	print_numbers(n/10);
-	printc((n % 10) + 48);
+	printc((n % 10) + 48, count);
 
     
 }
@@ -30,11 +30,11 @@ void print_numbers(int n)
  * Return: nothing
  */
 
-void print_char(va_list *ptr)
+void print_char(va_list *ptr, int *count)
 {
   int i;
   i = va_arg(*ptr, int);
- printc(i);
+ printc(i, count);
 
 }
 
@@ -45,20 +45,20 @@ void print_char(va_list *ptr)
  * Return: nothing
  */
 
-void print_integer(va_list *ptr)
+void print_integer(va_list *ptr, int *count)
 {
   int i;
   i = va_arg(*ptr, int);
 	if (i > -1)
 	{
-		print_numbers(i);
+		print_numbers(i, count);
 	
 	}
 	else 
 	{
 		
-		printc('-');
-		print_numbers(-i);
+		printc('-', count);
+		print_numbers(-i, count);
 		
 	}
  
@@ -71,7 +71,7 @@ void print_integer(va_list *ptr)
  * Return: nothing
  */
 
-void print_string(va_list *ptr)
+void print_string(va_list *ptr, int *count)
 {
   char *str;
   int i;
@@ -81,7 +81,7 @@ void print_string(va_list *ptr)
 	
   while (str[i] != '\0')
   {
-  	printc(str[i]);
+  	printc(str[i], count);
 		
 	  ++i;
   }
@@ -101,12 +101,12 @@ int _printf(const char *format, ...)
     {'i', print_integer},
 	{'d', print_integer}
   };
-	int i, k, *j, count;
+	int i, k, *count, finalcount;
   va_list args, *ptr;
 
-	j = malloc(sizeof(int));
+	count = malloc(sizeof(int));
 	ptr = &args;
-	*j = 0;
+	*count = 0;
 	
 
 	va_start(args, format);
@@ -114,7 +114,7 @@ int _printf(const char *format, ...)
 	{
 		if (*format != '%')
 		{
-			printc(*format);
+			printc(*format, count);
 			
 			
 		}
@@ -143,7 +143,7 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
-				printc(*format);
+				printc(*format,count);
 				
 			
 			}
@@ -153,8 +153,8 @@ int _printf(const char *format, ...)
 		
 	va_end(args);
 	
-	count = *j;
-	free(j);
+	finalcount = *count;
+	free(count);
   
 return (count);
 }
