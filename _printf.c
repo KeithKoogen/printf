@@ -14,12 +14,12 @@ void print_numbers(int n, int *ptrint)
 	if (n < 10)
 	{
 		printc(n + 48);
-		**ptrint = **ptrint + 1;
+		*ptrint = *ptrint + 1;
 		return;
 	}
 	print_numbers(n/10);
 	printc((n % 10) + 48);
-	*ptr = *ptr + 1;
+	*ptrint = *ptrint + 1;
     
 }
 
