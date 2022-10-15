@@ -91,7 +91,7 @@ int _printf(const char *format, ...)
     {'i', print_integer},
 	{'d', print_integer}
   };
-	int i, j;
+	int i, j, k;
 
 
   va_list args, *ptr;
@@ -110,6 +110,7 @@ int _printf(const char *format, ...)
 		else
 		{
 		i = 0;
+			k = 0;
 		while (i < 4)
 		{
 			
@@ -117,18 +118,28 @@ int _printf(const char *format, ...)
 				{
 					functions[i].function(ptr);
 					++j;
-					++format;
+					
+					++k;
 	
 				}
 					
 					
 			++i;
 		}
+			if (k = 1)
+			{
+				++format;
+			}
+			else
+			{
+				printc(*format);
+			++j;
+			}
 		}
 		++format;
 	}
 		
 	va_end(args);
   
-return (j + 1);
+return (j);
 }
