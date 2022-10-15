@@ -9,12 +9,12 @@
  * Return: nothing
  */
 
-void print_numbers(int n, *ptr)
+void print_numbers(int n, *ptrint)
 {
 	if (n < 10)
 	{
 		printc(n + 48);
-		*ptr = *ptr + 1;
+		**ptrint = **ptrint + 1;
 		return;
 	}
 	print_numbers(n/10);
@@ -30,12 +30,12 @@ void print_numbers(int n, *ptr)
  * Return: nothing
  */
 
-void print_char(va_list *ptr, int *ptr)
+void print_char(va_list *ptr, int *ptrint)
 {
   int i;
   i = va_arg(*ptr, int);
  printc(i);
-	*ptr = *ptr + 1;
+	*ptrint = *ptrint + 1;
 }
 
 /**
@@ -45,21 +45,21 @@ void print_char(va_list *ptr, int *ptr)
  * Return: nothing
  */
 
-void print_integer(va_list *ptr, int *ptr)
+void print_integer(va_list *ptr, int *ptrint)
 {
   int i;
   i = va_arg(*ptr, int);
 	if (i > -1)
 	{
 		print_numbers(i);
-		*ptr = *ptr + 1;
+		*ptrint = *ptrint + 1;
 	}
 	else 
 	{
 		
 		printc('-');
 		print_numbers(-i);
-		*ptr = *ptr + 1;
+		*ptrint = *ptrint + 1;
 	}
  
 }
@@ -71,7 +71,7 @@ void print_integer(va_list *ptr, int *ptr)
  * Return: nothing
  */
 
-void print_string(va_list *ptr, int *ptr)
+void print_string(va_list *ptr, int *ptrint)
 {
   char *str;
   int i;
@@ -82,7 +82,7 @@ void print_string(va_list *ptr, int *ptr)
   while (str[i] != '\0')
   {
   	printc(str[i]);
-		*ptr = *ptr + 1;
+		*ptrint = *ptrint + 1;
 	  ++i;
   }
 }
@@ -115,6 +115,7 @@ int _printf(const char *format, ...)
 		if (*format != '%')
 		{
 			printc(*format);
+			*j = *j + 1;
 			
 		}
 		else
@@ -143,6 +144,7 @@ int _printf(const char *format, ...)
 			else
 			{
 				printc(*format);
+				*j = *j + 1;
 			
 			}
 		}
