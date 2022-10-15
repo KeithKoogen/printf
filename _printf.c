@@ -129,9 +129,10 @@ int _printf(const char *format, ...)
 				printc(*format, count);
 				++k;
 			}
-
-			k == 1 ? ++format : printc(*format, count);
-
+			if (k == 1)
+				++format;
+			if (k == 0)
+				printc(*format, count);
 		}
 		++format;
 	}
