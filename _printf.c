@@ -14,7 +14,7 @@ void print_numbers(int n)
 	if (n < 10)
 	{
 		printc(n + 48);
-		*ptrint = *ptrint + 1;
+		
 		return;
 	}
 	print_numbers(n/10);
@@ -51,7 +51,7 @@ void print_integer(va_list *ptr)
   i = va_arg(*ptr, int);
 	if (i > -1)
 	{
-		print_numbers(i, ptrint);
+		print_numbers(i);
 	
 	}
 	else 
