@@ -9,7 +9,7 @@
  * Return: nothing
  */
 
-void print_numbers(int n, int *count)
+void print_numbers(int n, unsigned int *count)
 {
 	if (n < 10)
 	{
@@ -30,7 +30,7 @@ void print_numbers(int n, int *count)
  * Return: nothing
  */
 
-void print_char(va_list *ptr, int *count)
+void print_char(va_list *ptr, unsigned int *count)
 {
   int i;
   i = va_arg(*ptr, int);
@@ -45,7 +45,7 @@ void print_char(va_list *ptr, int *count)
  * Return: nothing
  */
 
-void print_integer(va_list *ptr, int *count)
+void print_integer(va_list *ptr, unsigned int *count)
 {
   int i;
   i = va_arg(*ptr, int);
@@ -71,7 +71,7 @@ void print_integer(va_list *ptr, int *count)
  * Return: nothing
  */
 
-void print_string(va_list *ptr, int *count)
+void print_string(va_list *ptr, unsigned int *count)
 {
   char *str;
   int i;
@@ -101,7 +101,7 @@ int _printf(const char *format, ...)
     {'i', print_integer},
 	{'d', print_integer}
   };
-	int i, k, *count, finalcount;
+	unsigned int i, k, *count, finalcount;
   va_list args, *ptr;
 
 	count = malloc(sizeof(int));
@@ -143,7 +143,7 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
-				printc(*format,count);
+				printc(*format, count);
 				
 			
 			}
