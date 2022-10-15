@@ -12,7 +12,7 @@ void print_numbers(int n)
 {
 	if (n < 10)
 	{
-		_putchar(n + 48);
+		printc(n + 48);
 		return;
 	}
 	print_numbers(n/10);
