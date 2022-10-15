@@ -17,7 +17,7 @@ void print_numbers(int n, unsigned int *count)
 		printc(n + 48, count);
 		return;
 	}
-	print_numbers(n/10, count);
+	print_numbers(n / 10, count);
 	printc((n % 10) + 48, count);
 }
 
@@ -31,9 +31,9 @@ void print_numbers(int n, unsigned int *count)
 
 void print_char(va_list *ptr, unsigned int *count)
 {
-  int i;
-  i = va_arg(*ptr, int);
- printc(i, count);
+	int i;
+	i = va_arg(*ptr, int);
+	printc(i, count);
 }
 
 /**
@@ -46,13 +46,13 @@ void print_char(va_list *ptr, unsigned int *count)
 
 void print_integer(va_list *ptr, unsigned int *count)
 {
-  int i;
-  i = va_arg(*ptr, int);
+	int i;
+	i = va_arg(*ptr, int);
 	if (i > -1)
 	{
 		print_numbers(i, count);
 	}
-	else 
+	else
 	{
 		printc('-', count);
 		print_numbers(-i, count);
@@ -69,18 +69,16 @@ void print_integer(va_list *ptr, unsigned int *count)
 
 void print_string(va_list *ptr, unsigned int *count)
 {
-  char *str;
-  int i;
-	
-  i = 0;
-  str = va_arg(*ptr, char *);
+	char *str;
+	int i;	
+	i = 0;
+	str = va_arg(*ptr, char *);
 
-  while (str[i] != '\0')
-  {
-  	printc(str[i], count);
-		
-	  ++i;
-  }
+	while (str[i] != '\0')
+	{
+		printc(str[i], count);
+		++i;
+	}
 }
 /**
  * _printf - a function that prints
