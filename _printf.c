@@ -103,6 +103,9 @@ int _printf(const char *format, ...)
   };
 	unsigned int i, k, *count, finalcount;
   va_list args, *ptr;
+	
+	if (format == NULL)
+		return (0);
 
 	count = malloc(sizeof(int));
 	
