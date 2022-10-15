@@ -31,6 +31,7 @@ void print_numbers(int n, unsigned int *count)
 void print_char(va_list *ptr, unsigned int *count)
 {
 	int i;
+
 	i = va_arg(*ptr, int);
 
 	printc(i, count);
@@ -71,6 +72,7 @@ void print_string(va_list *ptr, unsigned int *count)
 {
 	char *str;
 	int i;
+
 	i = 0;
 	str = va_arg(*ptr, char *);
 
