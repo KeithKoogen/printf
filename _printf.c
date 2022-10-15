@@ -74,7 +74,10 @@ void print_string(va_list *ptr)
   str = va_arg(*ptr, char *);
 	
   while (str[i] != '\0')
+  {
   	printc(str[i]);
+	  ++i;
+  }
 }
 /**
  * _printf - a function that prints
