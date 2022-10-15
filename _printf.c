@@ -113,6 +113,8 @@ int _printf(const char *format, ...)
 		return (-1);
 	
 	ptr = &args;
+	if (ptr == NULL)
+		return (-1);
 	*count = 0;
 	
 
