@@ -105,12 +105,12 @@ int _printf(const char *format, ...)
   va_list args, *ptr;
 	
 	if (format == NULL)
-		return (NULL);
+		return (0);
 
 	count = malloc(sizeof(int));
 	
 	if (count == NULL)
-		return (NULL);
+		return (0);
 	
 	ptr = &args;
 	*count = 0;
