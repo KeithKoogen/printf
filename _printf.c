@@ -17,7 +17,7 @@ void print_numbers(int n, int *ptrint)
 		*ptrint = *ptrint + 1;
 		return;
 	}
-	print_numbers(n/10, *ptrint);
+	print_numbers(n/10, ptrint);
 	printc((n % 10) + 48);
 	*ptrint = *ptrint + 1;
     
