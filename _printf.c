@@ -16,7 +16,7 @@ void print_numbers(int n)
 		return;
 	}
 	print_numbers(n/10);
-	_putchar((n % 10) + 48);
+	printc((n % 10) + 48);
     
 }
 
@@ -31,7 +31,7 @@ void print_char(va_list *ptr)
 {
   int i;
   i = va_arg(*ptr, int);
- _putchar(i);
+ printc(i);
 }
 
 /**
@@ -52,7 +52,7 @@ void print_integer(va_list *ptr)
 	else 
 	{
 		
-		_putchar('-');
+		printc('-');
 		print_numbers(-i);
 	}
  
@@ -74,7 +74,7 @@ void print_string(va_list *ptr)
   str = va_arg(*ptr, char *);
 	
   while (str[i] != '\0')
-  	_putchar(str[i]);
+  	printc(str[i]);
 }
 /**
  * _printf - a function that prints
