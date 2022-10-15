@@ -156,5 +156,5 @@ int _printf(const char *format, ...)
 	finalcount = *count;
 	free(count);
   
-return (count);
+return (finalcount);
 }
