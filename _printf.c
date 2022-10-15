@@ -107,8 +107,7 @@ int _printf(const char *format, ...)
 		{
 			printc(*format, count);
 		}
-		else
-		{
+		else {
 			i = 0;
 			k = 0;
 			while (i < 4)
