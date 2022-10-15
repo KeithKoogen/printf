@@ -126,7 +126,7 @@ int _printf(const char *format, ...)
 					
 			++i;
 		}
-			if (k = 1)
+			if (k == 1)
 			{
 				++format;
 			}
