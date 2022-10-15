@@ -7,7 +7,7 @@
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-int printc(char c, int *ptr)
+int printc(char c, unsigned int *ptr)
 {
 	*ptr = *ptr + 1;
 	return (write(1, &c, 1));
