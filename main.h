@@ -10,7 +10,7 @@ typedef struct function_brain
 	void (*function)();
 }function;
 
-int printc(char c, unsigned int *ptr);
+int printc(char c, unsigned int *count);
 
 void print_numbers(int n, unsigned int *count);
 void print_char(va_list *ptr, unsigned int *count);
