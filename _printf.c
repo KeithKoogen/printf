@@ -127,7 +127,7 @@ int _printf(const char *format, ...)
 			
 				if (functions[i].symbol == *(format + 1))
 				{
-					functions[i].function(ptr);
+					functions[i].function(ptr, count);
 					
 					
 					++k;
