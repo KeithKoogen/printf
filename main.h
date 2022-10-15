@@ -1,6 +1,9 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#include <starg.h>
+#include <stdio.h>
+
 typedef struct function_brain
 {
 	char symbol;
