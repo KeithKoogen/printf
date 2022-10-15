@@ -69,7 +69,8 @@ void print_string(va_list *ptr)
 {
   char *str;
   int i;
-  
+	
+  i = 0;
   str = va_arg(*ptr, char *);
 	
   while (str[i] != '\0')
