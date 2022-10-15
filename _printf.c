@@ -93,11 +93,11 @@ int _printf(const char *format, ...)
   };
 	int i, j;
 
-	j = 0;
-  
+
   va_list args, *ptr;
 
 	ptr = &args;
+	j = 0;
 
 	va_start(args, format);
 	while (*format != '\0')
