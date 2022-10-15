@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 /**
- * print_number - prints numbers
+ * print_numbers - prints numbers
  * @n: amount of numbers
  * @count: a pointer to an int that keeps count
  * Return: nothing
@@ -25,7 +25,6 @@ void print_numbers(int n, unsigned int *count)
  * print_char - prints a char
  * @ptr: pointer
  * @count: a pointer to an int that keeps count
- * @va_list: type for iterating arguments
  * Return: nothing
  */
 
@@ -33,6 +32,7 @@ void print_char(va_list *ptr, unsigned int *count)
 {
 	int i;
 	i = va_arg(*ptr, int);
+
 	printc(i, count);
 }
 
@@ -40,14 +40,15 @@ void print_char(va_list *ptr, unsigned int *count)
  * print_integer - prints an integer
  * @ptr: pointer
  * @count: a pointer to an int that keeps count
- * @va_list: type for iterating arguments
  * Return: nothing
  */
 
 void print_integer(va_list *ptr, unsigned int *count)
 {
 	int i;
+
 	i = va_arg(*ptr, int);
+
 	if (i > -1)
 	{
 		print_numbers(i, count);
@@ -63,14 +64,13 @@ void print_integer(va_list *ptr, unsigned int *count)
  * print_string - prints a string
  * @ptr: pointer
  * @count: a pointer to an int that keeps count
- * @va_list: type for iterating arguments
  * Return: nothing
  */
 
 void print_string(va_list *ptr, unsigned int *count)
 {
 	char *str;
-	int i;	
+	int i;
 	i = 0;
 	str = va_arg(*ptr, char *);
 
@@ -95,7 +95,7 @@ int _printf(const char *format, ...)
 	{'d', print_integer}
 	};
 	unsigned int i, k, *count, finalcount;
-  va_list args, *ptr;
+	va_list args, *ptr;
 
 	if (format == NULL)
 		return (-1);
@@ -109,7 +109,7 @@ int _printf(const char *format, ...)
 	if (ptr == NULL)
 		return (-1);
 	*count = 0;
-	
+
 	va_start(args, format);
 	while (*format != '\0')
 	{
@@ -119,17 +119,17 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-		i = 0;
+			i = 0;
 			k = 0;
-		while (i < 4)
-		{
+			while (i < 4)
+			{
 				if (functions[i].symbol == *(format + 1))
 				{
 					functions[i].function(ptr, count);
 					++k;
 				}
 			++i;
-		}
+			}
 			if (*(format + 1) == '%')
 			{
 				printc(*format, count);
