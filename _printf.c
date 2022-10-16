@@ -90,8 +90,7 @@ void print_string(va_list *ptr, unsigned int *count)
 
 int _printf(const char *format, ...)
 {
-	function functions[] = {{'c', print_char}, {'s', print_string},
-				{'i', print_integer}, {'d', print_integer}};
+function functions[] = {{'c', print_char}, {'s', print_string}, {'i', print_integer}, {'d', print_integer}};
 	unsigned int i, k, *count, finalcount;
 	va_list args, *ptr;
 
