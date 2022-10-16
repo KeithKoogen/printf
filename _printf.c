@@ -69,6 +69,8 @@ void print_string(va_list *ptr, unsigned int *count)
 void print_everything(const char *format, unsigned int *count, va_list *ptr)
 {
 	unsigned int i, k;
+	function functions[] = {{'c', print_char}, {'s', print_string},
+			{'i', print_integer}, {'d', print_integer}};
 
 	while (*format != '\0')
 	{
@@ -109,8 +111,6 @@ void print_everything(const char *format, unsigned int *count, va_list *ptr)
 
 int _printf(const char *format, ...)
 {
-function functions[] = {{'c', print_char}, {'s', print_string},
-			{'i', print_integer}, {'d', print_integer}};
 	unsigned int *count, finalcount;
 	va_list args, *ptr;
 
@@ -119,7 +119,7 @@ function functions[] = {{'c', print_char}, {'s', print_string},
 		return (-1);
 	ptr = &args, *count = 0;
 	va_start(args, format);
-	void print_everything(format, count, ptr);
+	print_everything(format, count, ptr);
 
 	va_end(args);
 	finalcount = *count;
