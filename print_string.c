@@ -11,14 +11,14 @@ void print_string(va_list *ptr, unsigned int *count)
 {
 	char *str;
 	int i;
-
-  if (0 > i < 32 || 32 >= 127)
-  {
-    printc("\x", 41, 5a);
-  }
    
 	i = 0;
 	str = va_arg(*ptr, char *);
+	
+	if (0 > i < 32 || 32 >= 127)
+  	{
+   	 printc("\x", 16, 0);
+ 	}
 
 	while (str[i] != '\0')
 	{
