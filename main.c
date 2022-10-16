@@ -14,7 +14,7 @@ int main(void)
     unsigned int ui;
     void *addr;
     
-    binary = 1234;
+    binary = 12;
 
     len = _printf("Let's try to printf a simple sentence.\n");
     len2 = printf("Let's try to printf a simple sentence.\n");
