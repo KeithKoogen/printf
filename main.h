@@ -13,8 +13,11 @@ typedef struct function_brain
 int printc(char c, unsigned int *count);
 
 void print_numbers(int n, unsigned int *count);
+
 void print_char(va_list *ptr, unsigned int *count);
+
 void print_integer(va_list *ptr, unsigned int *count);
+
 void print_string(va_list *ptr, unsigned int *count);
 
 
