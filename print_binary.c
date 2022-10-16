@@ -43,6 +43,6 @@ void print_binary(va_list *ptr, unsigned int *count)
 		i = i * 10;
 	}
 
-	print_numbers_bin(binary_number, count);
+	print_numbers(binary_number, count);
 	
 }
