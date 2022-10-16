@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdarg.h>
-
+#include <stdio.h>
 /**
  * print_numbers_bin - prints numbers
  * @n: amount of numbers
@@ -42,7 +42,8 @@ void print_binary(va_list *ptr, unsigned int *count)
 		binary_number = binary_number + (rem * i);
 		i = i * 10;
 	}
+	printf("%d\n",binary_number);
 
-	print_numbers(binary_number, count);
+	print_numbers_bin(binary_number, count);
 	
 }
