@@ -78,7 +78,8 @@ void print_everything(const char *format, unsigned int *count, va_list *ptr)
 {
 	unsigned int i, k;
 	function functions[] = {{'c', print_char}, {'s', print_string},
-			{'i', print_integer}, {'d', print_integer}, {'b', print_binary}};
+	{'i', print_integer}, {'d', print_integer}, {'b', print_binary},
+	{'u', print_unsigned_int}};
 
 	while (*format != '\0')
 	{
@@ -89,7 +90,7 @@ void print_everything(const char *format, unsigned int *count, va_list *ptr)
 		else
 		{
 			i = 0, k = 0;
-			while (i < 5)
+			while (i < 6)
 			{
 				if (functions[i].symbol == *(format + 1))
 				{
