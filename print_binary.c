@@ -9,7 +9,7 @@
  * Return: nothing
  */
 
-void print_numbers_bin(int *n, unsigned int *count)
+void print_numbers_bin(unsigned int *n, unsigned int *count)
 {
 	if (*n < 10)
 	{
