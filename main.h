@@ -5,7 +5,7 @@
 #include <stdio.h>
 
 /**
- * function_brain - type of struct
+ * struct function_brain - type of struct
  * @symbol: symbol
  * @function: pointer
  */
