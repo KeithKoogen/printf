@@ -20,10 +20,10 @@ void print_binary(va_list *ptr, unsigned int *count)
 	{
 		rem = n % 2;
 		n = n / 2;
-		binary_number = binary_number + (rem * i);
+		*binary_number = *binary_number + (rem * i);
 		i = i * 10;
 	}
 
-	print_numbers(binary_number, count);
+	print_numbers(*binary_number, count);
 	free(binary_number);
 }
