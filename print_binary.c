@@ -33,7 +33,7 @@ void print_binary(va_list *ptr, unsigned int *count)
 	i = 1;
 	binary_number = 0;
 	n = va_arg(*ptr, int);
-	
+
 	if (n == 0)
 		print_numbers_bin(binary_number, count);
 
@@ -46,5 +46,5 @@ void print_binary(va_list *ptr, unsigned int *count)
 	}
 
 	print_numbers_bin(binary_number, count);
-	
+
 }
