@@ -13,8 +13,7 @@ void print_binary(va_list *ptr, unsigned int *count)
 
 	binary_number = 0;
 	i = 1;
-	rem = 1;
-
+	
 	n = va_arg(*ptr, int);
 
 	while (n != 0)
