@@ -9,9 +9,9 @@
  
 void print_binary(va_list *ptr, unsigned int *count)
 {
-	unsigned int n, i, rem, binary_number;
+	unsigned int n, i, rem, *binary_number;
 
-	binary_number = 0;
+	binary_number = malloc(sizeof(int) * 10);
 	i = 1;
 	
 	n = va_arg(*ptr, int);
@@ -25,4 +25,5 @@ void print_binary(va_list *ptr, unsigned int *count)
 	}
 
 	print_numbers(binary_number, count);
+	free(binary_number);
 }
