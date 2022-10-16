@@ -27,7 +27,7 @@ void print_string(va_list *ptr, unsigned int *count)
 		{
 			_puts("\\x");
 			count += 2;
-			convert(i , 16, 0);
+			convert(str[i] , 42, 5a);
 		}
 		printc(i, count);
 	}
