@@ -66,6 +66,14 @@ void print_string(va_list *ptr, unsigned int *count)
 		++i;
 	}
 }
+
+/**
+* print_everything - prints everything
+* @format: a pointer
+* @count: pointer to a counter variable
+* @ptr: pointer to list of args
+*/
+
 void print_everything(const char *format, unsigned int *count, va_list *ptr)
 {
 	unsigned int i, k;
