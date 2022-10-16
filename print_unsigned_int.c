@@ -8,4 +8,3 @@
 
 void print_unsigned_int(unsigned int *count, va_list *ptr)
 {
-	
