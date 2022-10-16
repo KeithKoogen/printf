@@ -13,7 +13,7 @@ void print_string(va_list *ptr, unsigned int *count)
 	int i;
    
 	i = 0;
-	str = va_arg(*ptr, char *);
+	str = va_arg(*ptr, char *str);
 	
 	while (str[i] != '\0')
 	{
