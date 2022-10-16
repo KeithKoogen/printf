@@ -1,3 +1,7 @@
+#include "main.h"
+#include <stdarg.h>
+
+
 void print_binary(va_list *ptr, unsigned int *count)
 {
 	unsigned int n, i, rem;
