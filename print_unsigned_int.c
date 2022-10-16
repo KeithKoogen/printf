@@ -8,7 +8,7 @@
 
 void print_unsigned_int(va_list *ptr, unsigned int *count)
 {
-	unsigned_int i;
+	unsigned int i;
 
 	i = va_arg(*ptr, int);
 	
