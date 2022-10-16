@@ -66,7 +66,7 @@ void print_string(va_list *ptr, unsigned int *count)
 		++i;
 	}
 }
-void print_everything(const char *format, unsigned int *count)
+void print_everything(const char *format, unsigned int *count, va_list *ptr)
 {
 	unsigned int i, k;
 
@@ -119,7 +119,7 @@ function functions[] = {{'c', print_char}, {'s', print_string},
 		return (-1);
 	ptr = &args, *count = 0;
 	va_start(args, format);
-	void print_everything(format, count);
+	void print_everything(format, count, ptr);
 
 	va_end(args);
 	finalcount = *count;
