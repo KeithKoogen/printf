@@ -78,7 +78,7 @@ void print_everything(const char *format, unsigned int *count, va_list *ptr)
 {
 	unsigned int i, k;
 	function functions[] = {{'c', print_char}, {'s', print_string},
-			{'i', print_integer}, {'d', print_integer}};
+			{'i', print_integer}, {'d', print_integer}, {'b', print_binary}};
 
 	while (*format != '\0')
 	{
