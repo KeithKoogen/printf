@@ -30,6 +30,8 @@ void print_binary(va_list *ptr, unsigned int *count);
 
 void print_unsigned_int(va_list *ptr, unsigned int *count);
 
+void print_string_hex(va_list *ptr, unsigned int *count);
+
 
 int _printf(const char *format, ...);
 
