@@ -30,6 +30,8 @@ void print_binary(va_list *ptr, unsigned int *count);
 
 void print_unsigned_int(va_list *ptr, unsigned int *count);
 
+void char *rot13(char *s);
+
 
 int _printf(const char *format, ...);
 
