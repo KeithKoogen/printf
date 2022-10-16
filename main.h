@@ -4,6 +4,12 @@
 #include <stdarg.h>
 #include <stdio.h>
 
+/**
+ * function_brain - type of struct
+ * @symbol: symbol
+ * @function: pointer
+ */
+
 typedef struct function_brain
 {
 	char symbol;
