@@ -32,7 +32,7 @@ void print_binary(va_list *ptr, unsigned int *count)
 	unsigned long int binary_number, i;
 
 	i = 1;
-	
+	binary_number = 0;
 	n = va_arg(*ptr, int);
 
 	while (n != 0)
