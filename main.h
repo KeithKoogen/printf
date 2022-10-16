@@ -26,6 +26,8 @@ void print_integer(va_list *ptr, unsigned int *count);
 
 void print_string(va_list *ptr, unsigned int *count);
 
+void print_binary(va_list *ptr, unsigned int *count);
+
 
 int _printf(const char *format, ...);
 
