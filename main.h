@@ -8,7 +8,7 @@ typedef struct function_brain
 {
 	char symbol;
 	void (*function)();
-}function;
+} function;
 
 int printc(char c, unsigned int *count);
 
