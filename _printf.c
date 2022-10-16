@@ -89,7 +89,7 @@ void print_everything(const char *format, unsigned int *count, va_list *ptr)
 		else
 		{
 			i = 0, k = 0;
-			while (i < 4)
+			while (i < 5)
 			{
 				if (functions[i].symbol == *(format + 1))
 				{
