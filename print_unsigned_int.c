@@ -7,7 +7,7 @@
  * Return: nothing
  */
 
-void print_numbers(unsigned int n, unsigned int *count)
+void print_numbers_unsigned_int(unsigned int n, unsigned int *count)
 {
 	if (n < 10)
 	{
@@ -30,5 +30,5 @@ void print_unsigned_int(va_list *ptr, unsigned int *count)
 
 	i = va_arg(*ptr, unsigned int);
 	
-	print_numbers(i, count);
+	print_numbers_unsigned_int(i, count);
 }
