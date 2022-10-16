@@ -3,23 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/**
- * print_numbers - prints numbers
- * @n: amount of numbers
- * @count: a pointer to an int that keeps count
- * Return: nothing
- */
 
-void print_numbers(int n, unsigned int *count)
-{
-	if (n < 10)
-	{
-		printc(n + 48, count);
-		return;
-	}
-	print_numbers(n / 10, count);
-	printc((n % 10) + 48, count);
-}
 
 /**
  * print_char - prints a char
@@ -82,23 +66,10 @@ void print_string(va_list *ptr, unsigned int *count)
 		++i;
 	}
 }
-/**
- * _printf - a function that prints
- * @format: type of data to be printed on standard output
- * Return: int
- */
-
-int _printf(const char *format, ...)
+void print_everything(const char *format, unsigned int *count)
 {
-function functions[] = {{'c', print_char}, {'s', print_string}, {'i', print_integer}, {'d', print_integer}};
-	unsigned int i, k, *count, finalcount;
-	va_list args, *ptr;
+	unsigned int i, k;
 
-	count = malloc(sizeof(int));
-	if (count == NULL || format == NULL)
-		return (-1);
-	ptr = &args, *count = 0;
-	va_start(args, format);
 	while (*format != '\0')
 	{
 		if (*format != '%')
@@ -129,6 +100,27 @@ function functions[] = {{'c', print_char}, {'s', print_string}, {'i', print_inte
 		}
 		++format;
 	}
+}
+/**
+ * _printf - a function that prints
+ * @format: type of data to be printed on standard output
+ * Return: int
+ */
+
+int _printf(const char *format, ...)
+{
+function functions[] = {{'c', print_char}, {'s', print_string},
+			{'i', print_integer}, {'d', print_integer}};
+	unsigned int *count, finalcount;
+	va_list args, *ptr;
+
+	count = malloc(sizeof(int));
+	if (count == NULL || format == NULL)
+		return (-1);
+	ptr = &args, *count = 0;
+	va_start(args, format);
+	void print_everything(format, count);
+
 	va_end(args);
 	finalcount = *count;
 	free(count);
