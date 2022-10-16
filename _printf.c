@@ -109,7 +109,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			i = 0; k = 0;
+			i = 0, k = 0;
 			while (i < 4)
 			{
 				if (functions[i].symbol == *(format + 1))
