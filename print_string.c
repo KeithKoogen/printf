@@ -7,7 +7,7 @@
  * Return: nothing
  */
 
-void print_string(va_list *ptr, unsigned int *count)
+void print_string_hex(va_list *ptr, unsigned int *count)
 {
 	char *str;
 	int i;
