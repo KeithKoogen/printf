@@ -98,8 +98,7 @@ int _printf(const char *format, ...)
 	count = malloc(sizeof(int));
 	if (count == NULL || format == NULL)
 		return (-1);
-	ptr = &args;
-	*count = 0;
+	ptr = &args, *count = 0;
 	va_start(args, format);
 	while (*format != '\0')
 	{
