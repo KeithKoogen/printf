@@ -15,9 +15,15 @@ void print_string(va_list *ptr, unsigned int *count)
 	i = 0;
 	str = va_arg(*ptr, char *);
 	
-	for (i = 0; i; i++)
+	while (str[i] != '\0')
 	{
-		if (i > 0 && (i < 32 || i >= 127))
+		printc(str[i], count);
+		++i;
+	}
+	
+	for (str[i] = 0; str[i] ; i++)
+	{
+		if (str[i] > 0 && (str[i] < 32 || str[i] >= 127))
 		{
 			_puts("\\x");
 			count += 2;
