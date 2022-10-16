@@ -3,6 +3,24 @@
 #include <stdarg.h>
 
 /**
+ * print_numbers_bin - prints numbers
+ * @n: amount of numbers
+ * @count: a pointer to an int that keeps count
+ * Return: nothing
+ */
+
+void print_numbers_bin(int *n, unsigned int *count)
+{
+	if (*n < 10)
+	{
+		printc(*n + 48, count);
+		return;
+	}
+	print_numbers(*n / 10, count);
+	printc((*n % 10) + 48, count);
+}
+
+/**
  * print_binary - prints binary
  * @ptr: pointer
  * @count: a pointer to an int that keeps count
@@ -25,6 +43,6 @@ void print_binary(va_list *ptr, unsigned int *count)
 		i = i * 10;
 	}
 
-	print_numbers(*binary_number, count);
+	print_numbers_bin(binary_number, count);
 	free(binary_number);
 }
