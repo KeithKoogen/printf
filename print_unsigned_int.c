@@ -3,8 +3,15 @@
 /**
  * print_unsigned_int - prints unsigned integer
  * @count:  a pointer to an int that keeps count
- * @ptr: pointer
+ * @format: pointer
  */
 
-void print_unsigned_int(unsigned int *count, va_list *ptr)
+void print_unsigned_int(va_list *ptr, unsigned int *count)
 {
+	unsigned_int i;
+
+	i = va_arg(*ptr, unsigned_int);
+	
+	
+	}
+}
