@@ -9,15 +9,15 @@
  * Return: nothing
  */
 
-void print_numbers_bin(unsigned int *n, unsigned int *count)
+void print_numbers_bin(unsigned long int n, unsigned int *count)
 {
-	if (*n < 10)
+	if (n < 10)
 	{
-		printc(*n + 48, count);
+		printc(n + 48, count);
 		return;
 	}
-	print_numbers(*n / 10, count);
-	printc((*n % 10) + 48, count);
+	print_numbers(n / 10, count);
+	printc((n % 10) + 48, count);
 }
 
 /**
@@ -28,9 +28,9 @@ void print_numbers_bin(unsigned int *n, unsigned int *count)
  
 void print_binary(va_list *ptr, unsigned int *count)
 {
-	unsigned int n, i, rem, *binary_number;
+	unsigned int n, i, rem;
+	unsigned long int binary_number;
 
-	binary_number = malloc(sizeof(int) * 10);
 	i = 1;
 	
 	n = va_arg(*ptr, int);
@@ -39,10 +39,10 @@ void print_binary(va_list *ptr, unsigned int *count)
 	{
 		rem = n % 2;
 		n = n / 2;
-		*binary_number = *binary_number + (rem * i);
+		binary_number = binary_number + (rem * i);
 		i = i * 10;
 	}
 
 	print_numbers_bin(binary_number, count);
-	free(binary_number);
+	
 }
