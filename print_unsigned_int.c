@@ -1,6 +1,24 @@
 #include "main.h"
 
 /**
+ * print_numbers - prints numbers
+ * @n: amount of numbers
+ * @count: a pointer to an int that keeps count
+ * Return: nothing
+ */
+
+void print_numbers(unsigned int n, unsigned int *count)
+{
+	if (n < 10)
+	{
+		printc(n + 48, count);
+		return;
+	}
+	print_numbers(n / 10, count);
+	printc((n % 10) + 48, count);
+}
+
+/**
  * print_unsigned_int - prints unsigned integer
  * @count:  a pointer to an int that keeps count
  * @format: pointer
@@ -12,5 +30,5 @@ void print_unsigned_int(va_list *ptr, unsigned int *count)
 
 	i = va_arg(*ptr, unsigned int);
 	
-	printc(i, count);
+	print_numbers(i, count);
 }
