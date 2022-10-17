@@ -12,15 +12,6 @@ void print_string_hex(const char *ptr, unsigned int *count)
 	char *str;
 	int i;
    
-	i = 0;
-	str = va_arg(*ptr, char *str);
-	
-	while (str[i] != '\0')
-	{
-		printc(str[i], count);
-		++i;
-	}
-	
 	for (str[i] = 0; str[i] ; i++)
 	{
 		if (str[i] > 0 && (str[i] < 32 || str[i] >= 127))
