@@ -5,7 +5,7 @@
  * @s: pointer to char
  */
 
-void char *rot13(char *s)
+char *rot13(const char *src)
 {
 int i = 0;
 
@@ -15,13 +15,13 @@ char *l = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
 
 char *r13 = "NnOoPpQqRrSsTtUuVvWwXxYyZzAaBbCcDdEeFfGgHhIiJjKkLlMm";
 
-while (*(s + i) != '\0')
+while (*(src + i) != '\0')
 {
 while (*(l + j) != '\0')
 {
-if (*(s + i) == *(l + j))
+if (*(src + i) == *(l + j))
 {
-*(s + i)  = *(r13 + j);
+*(src + i)  == *(r13 + j);
 break;
 }
 j++;
@@ -29,5 +29,5 @@ j++;
 j = 0;
 i++;
 }
-return (s);
+return (src);
 }
