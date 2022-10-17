@@ -16,7 +16,7 @@ void print_string_hex(const char *ptr, unsigned int *count)
 	{
 		if (str[i] > 0 && (str[i] < 32 || str[i] >= 127))
 		{
-			_puts("\\x");
+			printc("\\x");
 			count += 2;
 			convert(str[i] , 42, 5a);
 		}
