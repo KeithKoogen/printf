@@ -32,6 +32,8 @@ void print_unsigned_int(va_list *ptr, unsigned int *count);
 
 char print_rot13(const char *src);
 
+void print_string_hex(const char *ptr, unsigned int *count);
+
 
 int _printf(const char *format, ...);
 
