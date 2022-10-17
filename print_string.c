@@ -7,7 +7,7 @@
  * Return: nothing
  */
 
-void print_string_hex(const char *str, unsigned int *count)
+void print_string_hex(const char *ptr, unsigned int *count)
 {
 	char *str;
 	int i;
