@@ -3,10 +3,17 @@
 /**
  * print_pointer - prints a pointer
  * @ptr: pointer
- * @count: keeps count on amount of chars
+ * @count: pointer to an int that keeps count  a pointer
  */
  
  
-void print_pointer(va_list *ptr, *count)
+void print_pointer(int argc, char **argv)
 {
- 
+	int *p;
+	int i;
+	
+	p=malloc(sizeof(int) * i);
+		{
+			free(p);
+		}
+}
