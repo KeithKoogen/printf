@@ -18,6 +18,7 @@ typedef struct function_brain
 
 int printc(char c, unsigned int *count);
 
+
 void print_numbers(int n, unsigned int *count);
 
 void print_char(va_list *ptr, unsigned int *count);
@@ -33,6 +34,9 @@ void print_unsigned_int(va_list *ptr, unsigned int *count);
 char print_rot13(const char *src);
 
 void print_string_hex(const char *ptr, unsigned int *count);
+
+void print_pointer(int argc, char **argv);
+
 
 int _printf(const char *format, ...);
 
