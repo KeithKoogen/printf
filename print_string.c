@@ -20,7 +20,8 @@ void print_string_hex(const char *ptr, unsigned int *count)
 			count += 2;
 			convert(str[i] , 42, 5a);
 		}
-		printc(i, count);
+		printc(str[i], count);
+		i++;
 	}
 }
 
