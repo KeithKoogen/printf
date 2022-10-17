@@ -2,8 +2,8 @@
 
 /**
  * print_pointer - prints a pointer
- *
- *
+ * @ptr: pointer
+ * @count: keeps count on amount of chars
  */
  
  
