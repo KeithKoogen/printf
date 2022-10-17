@@ -5,7 +5,7 @@
  * @s: pointer to char
  */
 
-char *rot13(const char *src)
+char print_rot13(const char *src)
 {
 int i = 0;
 
