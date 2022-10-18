@@ -3,29 +3,30 @@
 /**
  * rot13 - function that encodes a string using rot13.
  * @s: pointer to char
+ * Return: char
  */
 
-void print_rot13(va_list *ptr, unsigned int *count)
+char print_rot13(va_list *ptr, unsigned int *count)
 {
-int i;
-int j;
-char * str;
+int i = 0;
+int j = 0;
+char *l;
+char *r13 = "NnOoPpQqRrSsTtUuVvWwXxYyZzAaBbCcDdEeFfGgHhIiJjKkLlMm";
+ 
+l = va_arg(*ptr, char *);
 
-char alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-char cypher[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-str = va_arg(*ptr, char *);
-  
-i = 0;
-while (str[i] != '\0')
+while (*(s + i) != '\0')
 {
-for (j = 0; alphabet[j] != '\0'; j++)
+while (*(l + j) != '\0')
 {
-if (alphabet[j] == str[i])
+if (*(s + i) == *(l + j))
 {
-printc(cypher[j], count);
+printc(*(r13 + j), count);
 break;
 }
+j++;
 }
+j = 0;
 i++;
 }
-}
+
