@@ -22,9 +22,9 @@ while (*(str + i) != '\0')
 {
 while (*(l + j) != '\0')
 {
-if (*(s + i) == *(l + j))
+if (*(str + i) == *(l + j))
 {
-printc((r13 + j), count);
+printc(*(r13 + j), count);
 break;
 }
 j++;
