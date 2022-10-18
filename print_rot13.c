@@ -13,7 +13,8 @@ int j;
 
 i = 0;
 j = 0;
-char *l, *r13;
+char *l;
+char *r13;
 
 r13 = "NnOoPpQqRrSsTtUuVvWwXxYyZzAaBbCcDdEeFfGgHhIiJjKkLlMm";
   
