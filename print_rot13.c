@@ -6,7 +6,7 @@
  * Return: char
  */
 
-void print_rot13(va_list *ptr,char *)
+void print_rot13(va_list *ptr, char *)
 {
 int i;
 int j;
