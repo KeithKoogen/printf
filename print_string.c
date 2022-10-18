@@ -17,6 +17,12 @@ void print_string(va_list *ptr, unsigned int *count)
 	i = 0;
 	str = va_arg(*ptr, char *);
 
-	printc(str, count);
-	
+	while (str[i] != '\0')
+	{
+			printc(str[i], count);
+		++i;
+	}
+
+
+
 }
