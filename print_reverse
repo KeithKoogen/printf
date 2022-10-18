@@ -1,5 +1,7 @@
 #include "main.h"
 
+void reverse
+
 /**
  * print_reverse - prints numbers
  * @n: amount of numbers
@@ -7,7 +9,8 @@
  * Return: nothing
  */
 
-void print_reverse(int n, unsigned int *count)
+void print_string(va_list *ptr, unsigned int *count)
 {
+
 
 }
