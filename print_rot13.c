@@ -15,13 +15,13 @@ char *l = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
 
 char *r13 = "NnOoPpQqRrSsTtUuVvWwXxYyZzAaBbCcDdEeFfGgHhIiJjKkLlMm";
 
-while (*(ptr + i) != '\0')
+while (ptr[i] != '\0')
 {
-while (*(l + j) != '\0')
+while (l[j] != '\0')
 {
-if (*(ptr + i) == *(l + j))
+if ([ptr[i] == l[j])
 {
-*(ptr + i)  == *(r13 + j);
+ptr[i]  == r13[j];
 break;
 }
 j++;
