@@ -25,8 +25,8 @@ void print_reverse(va_list *ptr, unsigned int *count); - prints a reverse string
 int _printf(const char *format, ...);
 
 
-Requirements
-General
+ #Requirements
+ ##General
 
 -Allowed editors: vi, vim, emacs
 
@@ -53,7 +53,7 @@ General
 
 -Note that we will not provide the _putchar function for this project
 
-GitHub
+#GitHub
 
 -There should be one project repository per group. The other members do not fork or clone the project to ensure only one of the team has the repository in their github account otherwise you risk scoring 0%
 
@@ -84,7 +84,7 @@ $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
 
 -If the task does not specify what to do with an edge case, do the same as printf
 
-Copyright - Plagiarism
+#Copyright - Plagiarism
 
 -You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.
 
