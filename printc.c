@@ -13,5 +13,5 @@ void printc(char str, unsigned int *count)
 
 
 	*count = *count + 1;
-	write(1, str, 1);
+	write(1, &str, 1);
 }
