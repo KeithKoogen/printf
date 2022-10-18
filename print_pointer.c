@@ -7,13 +7,13 @@
  */
  
  
-void print_pointer(int argc, char **argv)
+void print_pointer(void *ptr, unsigned int *count)
 {
-	int *p;
-	int i;
+	char *address;
 	
-	p=malloc(sizeof(int) * i);
-		{
-			free(p);
-		}
+	address = (char *)&ptr
+		
+		
+	printc(address, count);
+
 }
