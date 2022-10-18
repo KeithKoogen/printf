@@ -7,7 +7,7 @@
  */
  
  
-void print_pointer(void *ptr, unsigned int *count)
+void print_pointer(va_list *ptr, unsigned int *count)
 {
 	char *address;
 	
