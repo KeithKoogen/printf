@@ -33,5 +33,10 @@ j++;
 j = 0;
 i++;
 }
-printc(str[0], count);
+  i = 0;
+  while (str[i] != '\0')
+  {
+    printc(str[0], count);
+    ++i;
+  }
 }
