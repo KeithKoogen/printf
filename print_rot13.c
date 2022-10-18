@@ -24,7 +24,7 @@ while (l[j] != '\0')
 {
 if (str[i] == l[j])
 {
-str[i]  == r13[j];
+str[i]  = r13[j];
 break;
 }
 j++;
