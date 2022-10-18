@@ -11,7 +11,7 @@ void print_pointer(va_list *ptr, unsigned int *count)
 {
 	char *address;
 	
-	address = (char *)&ptr
+	address = (char *)&ptr;
 		
 		
 	printc(address, count);
