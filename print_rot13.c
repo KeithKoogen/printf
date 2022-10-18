@@ -7,38 +7,28 @@
 
 void print_rot13(va_list *ptr, unsigned int *count)
 {
-char *str;
 int i;
 int j;
-char *l;
-char *r13;
-
-i = 0;
-j = 0;
-r13 = "NnOoPpQqRrSsTtUuVvWwXxYyZzAaBbCcDdEeFfGgHhIiJjKkLlMm";
-
-l = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
-
+char alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+char cypher[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 str = va_arg(*ptr, char *);
-
+i = 0;
 while (str[i] != '\0')
 {
-while (l[j] != '\0')
+for (j = 0; alphabet[j] != '\0'; j++)
 {
-if (str[i] == l[j])
+if (alphabet[j] == str[i])
 {
-str[i] = r13[j];
+str[i] = cypher[j];
 break;
 }
-j++;
 }
-j = 0;
 i++;
 }
   i = 0;
   while (str[i] != '\0')
   {
-    printc(str[0], count);
+    printc(str[i], count);
     ++i;
   }
 }
