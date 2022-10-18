@@ -5,7 +5,7 @@
  * @s: pointer to char
  */
 
-char print_rot13(const char *src)
+void print_rot13(va_list *ptr, unsigned int *count)
 {
 int i = 0;
 
@@ -15,13 +15,13 @@ char *l = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
 
 char *r13 = "NnOoPpQqRrSsTtUuVvWwXxYyZzAaBbCcDdEeFfGgHhIiJjKkLlMm";
 
-while (*(src + i) != '\0')
+while (*(ptr + i) != '\0')
 {
 while (*(l + j) != '\0')
 {
-if (*(src + i) == *(l + j))
+if (*(ptr + i) == *(l + j))
 {
-*(src + i)  == *(r13 + j);
+*(ptr + i)  == *(r13 + j);
 break;
 }
 j++;
@@ -29,5 +29,5 @@ j++;
 j = 0;
 i++;
 }
-return (src);
+printc(ptr, count);
 }
