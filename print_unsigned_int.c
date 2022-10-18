@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_numbers - prints numbers
+ * print_numbers_unsigned_int - prints numbers
  * @n: amount of numbers
  * @count: a pointer to an int that keeps count
  * Return: nothing
@@ -21,7 +21,7 @@ void print_numbers_unsigned_int(unsigned int n, unsigned int *count)
 /**
  * print_unsigned_int - prints unsigned integer
  * @count:  a pointer to an int that keeps count
- * @format: pointer
+ * @ptr: pointer
  */
 
 void print_unsigned_int(va_list *ptr, unsigned int *count)
@@ -29,6 +29,6 @@ void print_unsigned_int(va_list *ptr, unsigned int *count)
 	unsigned int i;
 
 	i = va_arg(*ptr, unsigned int);
-	
+
 	print_numbers_unsigned_int(i, count);
 }
