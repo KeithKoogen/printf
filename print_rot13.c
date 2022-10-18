@@ -16,7 +16,7 @@ char *r13;
 i = 0;
 j = 0;
 r13 = "NnOoPpQqRrSsTtUuVvWwXxYyZzAaBbCcDdEeFfGgHhIiJjKkLlMm";
-  
+
 l = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
 
 str = va_arg(*ptr, char *);
