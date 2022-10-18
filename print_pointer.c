@@ -10,7 +10,7 @@
 void print_pointer(va_list *ptr, unsigned int *count)
 {
 	void *address;
-	int *str;
+	int str;
 	
 	address = va_arg(*ptr, void *);
 	str = (int)address;
