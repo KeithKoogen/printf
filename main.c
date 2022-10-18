@@ -46,7 +46,7 @@ int main(void)
     _printf("Binary:[%b]\n", binary);
     printf("Binary:[%b]\n", binary);
     _printf("Reverse String:[%r]\n", str);
-    printf("Unknown:[%r]\n");
+    printf("Original String:[%s]\n", str);
     
     return (0);
 }
