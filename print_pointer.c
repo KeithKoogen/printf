@@ -14,7 +14,7 @@ void print_pointer(va_list *ptr, unsigned int *count)
 	int str;
 	
 	address = va_arg(*ptr, void *);
-	 str = &address;
+	 str = (int)&address;
 	
 	
 	printf("%x\n", str);
