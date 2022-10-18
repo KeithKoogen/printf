@@ -16,7 +16,7 @@ typedef struct function_brain
 	void (*function)();
 } function;
 
-void printc(char *str, unsigned int *count);
+void printc(char str, unsigned int *count);
 
 
 void print_numbers(int n, unsigned int *count);
