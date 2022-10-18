@@ -15,7 +15,7 @@ int main(void)
     void *addr;
     char *str;
     
-    str = "Hello World";
+    str = "abcdefghijklmnopqrstuvwxyz";
     
     binary = 98;
 
@@ -45,7 +45,7 @@ int main(void)
     printf("Len:[%d]\n", len2);
     _printf("Binary:[%b]\n", binary);
     printf("Binary:[%b]\n", binary);
-    _printf("Reverse String:[%r]\n", str);
+    _printf("Rot13 String:[%R]\n", str);
     printf("Original String:[%s]\n", str);
     
     return (0);
