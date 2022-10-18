@@ -9,10 +9,12 @@
  
 void print_pointer(va_list *ptr, unsigned int *count)
 {
-	char *address;
+	char *pointer;
+	int address;
 	
-	address = (char *)&ptr;
-	printf("%s\n", address);
+	address = va_arg(ptr, int);
+	pointer = (char *)&address;
+	printf("%s\n", pointer);
 		
 	printc(address[1], count);
 
