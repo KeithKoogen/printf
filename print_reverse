@@ -1,6 +1,5 @@
 #include "main.h"
 
-void reverse
 
 /**
  * print_reverse - prints numbers
