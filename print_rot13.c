@@ -8,16 +8,17 @@
 void print_rot13(va_list *ptr, unsigned int *count)
 {
 char *str;
-int i = 0;
+int i;
+int j;
 
-int j = 0;
-
+i = 0;
+j = 0;
 char *l = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
 
 char *r13 = "NnOoPpQqRrSsTtUuVvWwXxYyZzAaBbCcDdEeFfGgHhIiJjKkLlMm";
 
 str = va_arg(*ptr, char *);
-  
+
 while (str[i] != '\0')
 {
 while (l[j] != '\0')
