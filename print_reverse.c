@@ -5,7 +5,7 @@ void string_printer(char *str, unsigned int *count)
 	if (*str == '\0')
 		return;
 	
-	string_printer((str - 1), count);
+	string_printer((str + 1), count);
 	printc(*str, count);
 }
 /**
