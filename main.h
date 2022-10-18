@@ -35,6 +35,8 @@ void print_rot13(va_list *ptr, unsigned int *count);
 
 void print_pointer(va_list *ptr, unsigned int *count);
 
+void print_reverse(va_list *ptr, unsigned int *count);
+
 
 int _printf(const char *format, ...);
 
