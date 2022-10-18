@@ -32,5 +32,5 @@ j++;
 j = 0;
 i++;
 }
-print_string(str, count);
+printc(str[0], count);
 }
