@@ -13,7 +13,7 @@ void print_pointer(va_list *ptr, unsigned int *count)
 	char *str;
 	
 	address = va_arg(*ptr, void *);
-	str = (char *)address;
+	str = (char *)&address;
 	
 	
 	printf("%s\n", str);
