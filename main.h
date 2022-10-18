@@ -31,11 +31,9 @@ void print_binary(va_list *ptr, unsigned int *count);
 
 void print_unsigned_int(va_list *ptr, unsigned int *count);
 
-char print_rot13(const char *src);
+char print_rot13(va_list *ptr, unsigned int *count);
 
-void print_string_hex(const char *ptr, unsigned int *count);
-
-void print_pointer(int argc, char **argv);
+void print_pointer(va_list *ptr, unsigned int *count);
 
 
 int _printf(const char *format, ...);
