@@ -1,10 +1,18 @@
 #include "main.h"
 
+/**
+ * string_printer - prints a string
+ * @ptr: pointer
+ * @count: a pointer to an int that keeps count
+ * Return: nothing
+ */
+
+
 void string_printer(char *str, unsigned int *count)
 {
 	if (*str == '\0')
 		return;
-	
+
 	string_printer((str + 1), count);
 	printc(*str, count);
 }
@@ -17,12 +25,11 @@ void string_printer(char *str, unsigned int *count)
 
 void print_reverse(va_list *ptr, unsigned int *count)
 {
-	
-	char *str;
-	
-	str = va_arg(*ptr, char *);
-	
-	string_printer(str, count);
 
+	char *str;
+
+	str = va_arg(*ptr, char *);
+
+	string_printer(str, count);
 
 }
