@@ -1,7 +1,5 @@
 #include "main.h"
 
-
-
 /**
  * print_string - prints a string
  * @ptr: pointer
@@ -19,10 +17,8 @@ void print_string(va_list *ptr, unsigned int *count)
 
 	while (str[i] != '\0')
 	{
-			printc(str[i], count);
+		printc(str[i], count);
 		++i;
 	}
-
-
 
 }
