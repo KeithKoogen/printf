@@ -22,7 +22,7 @@ while (str[i] != '\0')
 {
 while (l[j] != '\0')
 {
-if ([str[i] == l[j])
+if (str[i] == l[j])
 {
 str[i]  == r13[j];
 break;
