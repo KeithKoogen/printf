@@ -13,6 +13,9 @@ int main(void)
     int len2, binary;
     unsigned int ui;
     void *addr;
+    char *str;
+    
+    str = "Hello World";
     
     binary = 98;
 
@@ -42,7 +45,8 @@ int main(void)
     printf("Len:[%d]\n", len2);
     _printf("Binary:[%b]\n", binary);
     printf("Binary:[%b]\n", binary);
-    _printf("Unknown:[%r]\n");
+    _printf("Reverse String:[%r]\n", str);
     printf("Unknown:[%r]\n");
+    
     return (0);
 }
