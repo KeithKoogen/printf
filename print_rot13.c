@@ -9,6 +9,8 @@ void print_rot13(va_list *ptr, unsigned int *count)
 {
 int i;
 int j;
+char * str;
+
 char alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 char cypher[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 str = va_arg(*ptr, char *);
