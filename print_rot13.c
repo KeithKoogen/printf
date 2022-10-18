@@ -14,6 +14,7 @@ char * str;
 char alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 char cypher[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 str = va_arg(*ptr, char *);
+  printf("ORIGINAL %s\n", str);
 i = 0;
 while (str[i] != '\0')
 {
