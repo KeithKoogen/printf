@@ -10,10 +10,10 @@
 void print_pointer(va_list *ptr, unsigned int *count)
 {
 	void *address;
-	unsigned int str;
+	uintptr_t str;
 	
 	address = va_arg(*ptr, void *);
-	str = (unsigned int)address;
+	 str = (uintptr_t)ptr;
 	
 	
 	printf("%i\n", str);
