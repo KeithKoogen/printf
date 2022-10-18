@@ -15,11 +15,11 @@ char *r13 = "NnOoPpQqRrSsTtUuVvWwXxYyZzAaBbCcDdEeFfGgHhIiJjKkLlMm";
  
 l = va_arg(*ptr, char *);
 
-while (*(s + i) != '\0')
+while (*(r13 + i) != '\0')
 {
 while (*(l + j) != '\0')
 {
-if (*(s + i) == *(l + j))
+if (*(r13 + i) == *(l + j))
 {
 printc(*(r13 + j), count);
 break;
