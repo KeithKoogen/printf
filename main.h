@@ -31,7 +31,7 @@ void print_binary(va_list *ptr, unsigned int *count);
 
 void print_unsigned_int(va_list *ptr, unsigned int *count);
 
-char print_rot13(va_list *ptr, unsigned int *count);
+void print_rot13(va_list *ptr, unsigned int *count);
 
 void print_pointer(va_list *ptr, unsigned int *count);
 
