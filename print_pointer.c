@@ -11,13 +11,13 @@
 void print_pointer(va_list *ptr, unsigned int *count)
 {
 	void *address;
-	char *str;
+	int str;
 	
 	address = va_arg(*ptr, void *);
 	 str = &address;
 	
 	
-	printf("%s\n", str);
+	printf("%x\n", str);
 	*count = *count + 1;
 
 
