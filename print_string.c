@@ -1,29 +1,6 @@
 #include "main.h"
 
-/**
- * print_string_hex - prints a string
- * @ptr: pointer
- * @count: a pointer to an int that keeps count
- * Return: nothing
- */
 
-void print_string_hex(const char *ptr, unsigned int *count)
-{
-	char *str;
-	int i;
-   
-	for (str[i] = 0; str[i] ; i++)
-	{
-		if (str[i] > 0 && (str[i] < 32 || str[i] >= 127))
-		{
-			printc("\\x");
-			count += 2;
-			convert(str[i] , 42, 5a);
-		}
-		printc(str[i], count);
-		i++;
-	}
-}
 
 /**
  * print_string - prints a string
