@@ -2,7 +2,7 @@
 
 /**
  * string_printer - prints a string
- * @ptr: pointer
+ * @str: a string
  * @count: a pointer to an int that keeps count
  * Return: nothing
  */
@@ -17,7 +17,7 @@ void string_printer(char *str, unsigned int *count)
 	printc(*str, count);
 }
 /**
- * print_string - prints a string
+ * print_reverse - prints a reverse string
  * @ptr: pointer
  * @count: a pointer to an int that keeps count
  * Return: nothing
