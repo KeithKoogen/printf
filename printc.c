@@ -8,19 +8,10 @@
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-void printc(char *str, unsigned int *count)
+void printc(char str, unsigned int *count)
 {
-	char buffer[1024];
-	int i;
-	
-	i = 0;
-	
-	while (str[i] != '\0')
-	{
-		buffer[i] = str[i];
-		++i
-	}
 
-	*count = *count + i;
-	write(1, buffer, i);
+
+	*count = *count + 1;
+	write(1, str, 1);
 }
