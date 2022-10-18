@@ -24,7 +24,7 @@ void print_numbers_bin(unsigned long int n, unsigned int *count)
  * @ptr: pointer
  * @count: a pointer to an int that keeps count
  */
- 
+
 void print_binary(va_list *ptr, unsigned int *count)
 {
 	unsigned int n, rem;
