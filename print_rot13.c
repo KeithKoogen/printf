@@ -6,22 +6,22 @@
  * Return: char
  */
 
-void print_rot13(va_list *ptr, unsigned int *count)
+void print_rot13(va_list *ptr,char *)
 {
 int i = 0;
 int j = 0;
-char *l;
+char *l = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
 char *r13 = "NnOoPpQqRrSsTtUuVvWwXxYyZzAaBbCcDdEeFfGgHhIiJjKkLlMm";
- 
-l = va_arg(*ptr, char *);
 
-while (*(r13 + i) != '\0')
+str = va_arg(*ptr, char *);
+ 
+while (*(s + i) != '\0')
 {
 while (*(l + j) != '\0')
 {
-if (*(r13 + i) == *(l + j))
+if (*(s + i) == *(l + j))
 {
-printc(*(r13 + j), count);
+printc((r13 + j), count);
 break;
 }
 j++;
