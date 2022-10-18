@@ -1,5 +1,28 @@
 # printf
 
+void printc(char str, unsigned int *count); - prints
+
+
+void print_numbers(int n, unsigned int *count); - prints a number 
+
+void print_char(va_list *ptr, unsigned int *count); - prints a char
+
+void print_integer(va_list *ptr, unsigned int *count); - prints an integer
+
+void print_string(va_list *ptr, unsigned int *count); - prints a string
+
+void print_binary(va_list *ptr, unsigned int *count); - prints binary
+
+void print_unsigned_int(va_list *ptr, unsigned int *count); - prints unsigned integer 
+
+void print_rot13(va_list *ptr, unsigned int *count); - prints rot13 
+
+void print_pointer(va_list *ptr, unsigned int *count);  - prints a pointer
+
+void print_reverse(va_list *ptr, unsigned int *count); - prints a reverse string
+
+
+int _printf(const char *format, ...);
 
 
 Requirements
