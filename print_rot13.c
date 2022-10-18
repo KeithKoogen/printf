@@ -29,5 +29,5 @@ j++;
 j = 0;
 i++;
 }
-printc(ptr, count);
+printc(ptr[0], count);
 }
