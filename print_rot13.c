@@ -10,12 +10,11 @@ void print_rot13(va_list *ptr, unsigned int *count)
 char *str;
 int i;
 int j;
-
-i = 0;
-j = 0;
 char *l;
 char *r13;
 
+i = 0;
+j = 0;
 r13 = "NnOoPpQqRrSsTtUuVvWwXxYyZzAaBbCcDdEeFfGgHhIiJjKkLlMm";
   
 l = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
