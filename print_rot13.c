@@ -14,7 +14,7 @@ char * str;
 char alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 char cypher[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 str = va_arg(*ptr, char *);
-  printf("ORIGINAL %s\n", str);
+  
 i = 0;
 while (str[i] != '\0')
 {
@@ -22,16 +22,10 @@ for (j = 0; alphabet[j] != '\0'; j++)
 {
 if (alphabet[j] == str[i])
 {
-str[i] = cypher[j];
+printc(cypher[j], count);
 break;
 }
 }
 i++;
 }
-  i = 0;
-  while (str[i] != '\0')
-  {
-    printc(str[i], count);
-    ++i;
-  }
-}
+
